@@ -1,0 +1,14 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "c:\\users\\deus_volt\\documents\\github\\td_game\\td_game\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\td_game\\permoduleinline.gen.cpp",
+        "ProvidedModule": "",
+        "PCH": "c:\\users\\deus_volt\\documents\\github\\td_game\\td_game\\intermediate\\build\\win64\\x64\\td_gameeditor\\development\\unrealed\\sharedpch.unrealed.project.valapi.valexpapi.cpp20.h.pch",
+        "Includes": [
+            "c:\\users\\deus_volt\\documents\\github\\td_game\\td_game\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\td_game\\definitions.td_game.h",
+            "c:\\program files\\epic games\\ue_5.7\\engine\\source\\runtime\\core\\public\\hal\\permoduleinline.inl"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}

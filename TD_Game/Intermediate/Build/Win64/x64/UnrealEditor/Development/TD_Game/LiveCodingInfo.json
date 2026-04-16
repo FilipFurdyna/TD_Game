@@ -1,0 +1,9 @@
+{
+	"RemapUnityFiles": 
+	{
+		"Module.TD_Game.gen.cpp.obj": [
+			"GridManager.gen.cpp.obj",
+			"TD_Game.init.gen.cpp.obj"
+		]
+	}
+}
