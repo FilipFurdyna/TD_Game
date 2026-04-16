@@ -41,25 +41,19 @@ struct Z_Construct_UEnum_TD_Game_ECornerType_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Enum_MetaDataParams[] = {
 		{ "BlueprintType", "true" },
-		{ "BottomLeft.DisplayName", "Bottom Left" },
-		{ "BottomLeft.Name", "ECornerType::BottomLeft" },
-		{ "BottomRight.DisplayName", "Bottom Right" },
-		{ "BottomRight.Name", "ECornerType::BottomRight" },
+		{ "Corner.DisplayName", "Corner" },
+		{ "Corner.Name", "ECornerType::Corner" },
 		{ "ModuleRelativePath", "GridManager.h" },
 		{ "None.DisplayName", "None" },
 		{ "None.Name", "ECornerType::None" },
-		{ "TopLeft.DisplayName", "Top Left" },
-		{ "TopLeft.Name", "ECornerType::TopLeft" },
-		{ "TopRight.DisplayName", "Top Right" },
-		{ "TopRight.Name", "ECornerType::TopRight" },
+		{ "Side.DisplayName", "Side" },
+		{ "Side.Name", "ECornerType::Side" },
 	};
 #endif // WITH_METADATA
 	static constexpr UECodeGen_Private::FEnumeratorParam Enumerators[] = {
 		{ "ECornerType::None", (int64)ECornerType::None },
-		{ "ECornerType::TopLeft", (int64)ECornerType::TopLeft },
-		{ "ECornerType::TopRight", (int64)ECornerType::TopRight },
-		{ "ECornerType::BottomLeft", (int64)ECornerType::BottomLeft },
-		{ "ECornerType::BottomRight", (int64)ECornerType::BottomRight },
+		{ "ECornerType::Corner", (int64)ECornerType::Corner },
+		{ "ECornerType::Side", (int64)ECornerType::Side },
 	};
 	static const UECodeGen_Private::FEnumParams EnumParams;
 }; // struct Z_Construct_UEnum_TD_Game_ECornerType_Statics 
@@ -272,8 +266,8 @@ struct Z_Construct_UClass_AGridManager_Statics
 const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_AGridManager_Statics::NewProp_tileSize = { "tileSize", nullptr, (EPropertyFlags)0x0010000000000001, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AGridManager, tileSize), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_tileSize_MetaData), NewProp_tileSize_MetaData) };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AGridManager_Statics::NewProp_cornerMeshes_ValueProp = { "cornerMeshes", nullptr, (EPropertyFlags)0x0000000000000001, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 1, Z_Construct_UClass_UStaticMesh_NoRegister, METADATA_PARAMS(0, nullptr) };
 const UECodeGen_Private::FBytePropertyParams Z_Construct_UClass_AGridManager_Statics::NewProp_cornerMeshes_Key_KeyProp_Underlying = { "UnderlyingType", nullptr, (EPropertyFlags)0x0000000000000000, UECodeGen_Private::EPropertyGenFlags::Byte, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 0, nullptr, METADATA_PARAMS(0, nullptr) };
-const UECodeGen_Private::FEnumPropertyParams Z_Construct_UClass_AGridManager_Statics::NewProp_cornerMeshes_Key_KeyProp = { "cornerMeshes_Key", nullptr, (EPropertyFlags)0x0000000000000001, UECodeGen_Private::EPropertyGenFlags::Enum, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 0, Z_Construct_UEnum_TD_Game_ECornerType, METADATA_PARAMS(0, nullptr) }; // 1797941707
-const UECodeGen_Private::FMapPropertyParams Z_Construct_UClass_AGridManager_Statics::NewProp_cornerMeshes = { "cornerMeshes", nullptr, (EPropertyFlags)0x0010000000000001, UECodeGen_Private::EPropertyGenFlags::Map, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AGridManager, cornerMeshes), EMapPropertyFlags::None, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_cornerMeshes_MetaData), NewProp_cornerMeshes_MetaData) }; // 1797941707
+const UECodeGen_Private::FEnumPropertyParams Z_Construct_UClass_AGridManager_Statics::NewProp_cornerMeshes_Key_KeyProp = { "cornerMeshes_Key", nullptr, (EPropertyFlags)0x0000000000000001, UECodeGen_Private::EPropertyGenFlags::Enum, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 0, Z_Construct_UEnum_TD_Game_ECornerType, METADATA_PARAMS(0, nullptr) }; // 499888474
+const UECodeGen_Private::FMapPropertyParams Z_Construct_UClass_AGridManager_Statics::NewProp_cornerMeshes = { "cornerMeshes", nullptr, (EPropertyFlags)0x0010000000000001, UECodeGen_Private::EPropertyGenFlags::Map, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AGridManager, cornerMeshes), EMapPropertyFlags::None, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_cornerMeshes_MetaData), NewProp_cornerMeshes_MetaData) }; // 499888474
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_AGridManager_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AGridManager_Statics::NewProp_tileSize,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AGridManager_Statics::NewProp_cornerMeshes_ValueProp,
@@ -324,13 +318,13 @@ AGridManager::~AGridManager() {}
 struct Z_CompiledInDeferFile_FID_Users_Deus_Volt_Documents_GitHub_TD_Game_TD_Game_Source_TD_Game_GridManager_h__Script_TD_Game_Statics
 {
 	static constexpr FEnumRegisterCompiledInInfo EnumInfo[] = {
-		{ ECornerType_StaticEnum, TEXT("ECornerType"), &Z_Registration_Info_UEnum_ECornerType, CONSTRUCT_RELOAD_VERSION_INFO(FEnumReloadVersionInfo, 1797941707U) },
+		{ ECornerType_StaticEnum, TEXT("ECornerType"), &Z_Registration_Info_UEnum_ECornerType, CONSTRUCT_RELOAD_VERSION_INFO(FEnumReloadVersionInfo, 499888474U) },
 	};
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_AGridManager, AGridManager::StaticClass, TEXT("AGridManager"), &Z_Registration_Info_UClass_AGridManager, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AGridManager), 226946451U) },
+		{ Z_Construct_UClass_AGridManager, AGridManager::StaticClass, TEXT("AGridManager"), &Z_Registration_Info_UClass_AGridManager, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AGridManager), 520500862U) },
 	};
 }; // Z_CompiledInDeferFile_FID_Users_Deus_Volt_Documents_GitHub_TD_Game_TD_Game_Source_TD_Game_GridManager_h__Script_TD_Game_Statics 
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Deus_Volt_Documents_GitHub_TD_Game_TD_Game_Source_TD_Game_GridManager_h__Script_TD_Game_3838114226{
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Deus_Volt_Documents_GitHub_TD_Game_TD_Game_Source_TD_Game_GridManager_h__Script_TD_Game_1326351078{
 	TEXT("/Script/TD_Game"),
 	Z_CompiledInDeferFile_FID_Users_Deus_Volt_Documents_GitHub_TD_Game_TD_Game_Source_TD_Game_GridManager_h__Script_TD_Game_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_Deus_Volt_Documents_GitHub_TD_Game_TD_Game_Source_TD_Game_GridManager_h__Script_TD_Game_Statics::ClassInfo),
 	nullptr, 0,

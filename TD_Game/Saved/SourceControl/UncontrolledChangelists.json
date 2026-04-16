@@ -158,7 +158,11 @@
 				"C:/Users/Deus_Volt/Documents/GitHub/TD_Game/TD_Game/Content/Player/BP_GameModeGameplay.uasset",
 				"C:/Users/Deus_Volt/Documents/GitHub/TD_Game/TD_Game/Content/__ExternalActors__/TestLevel/9/VR/1U3SM87THB685EZPJOET5Q.uasset",
 				"C:/Users/Deus_Volt/Documents/GitHub/TD_Game/TD_Game/Content/__ExternalActors__/TestLevel/1/7R/9NYIK5YNLHCK6TE4DXGAW3.uasset",
-				"C:/Users/Deus_Volt/Documents/GitHub/TD_Game/TD_Game/Content/Player/Input/Gameplay/IA_placeIsland.uasset"
+				"C:/Users/Deus_Volt/Documents/GitHub/TD_Game/TD_Game/Content/Player/Input/Gameplay/IA_placeIsland.uasset",
+				"C:/Users/Deus_Volt/Documents/GitHub/TD_Game/TD_Game/Content/IslandsSystem/Corners/test/cornerWall.uasset",
+				"C:/Users/Deus_Volt/Documents/GitHub/TD_Game/TD_Game/Content/IslandsSystem/Corners/test/grass.uasset",
+				"C:/Users/Deus_Volt/Documents/GitHub/TD_Game/TD_Game/Content/IslandsSystem/Corners/test/marble.uasset",
+				"C:/Users/Deus_Volt/Documents/GitHub/TD_Game/TD_Game/Content/IslandsSystem/Corners/test/sideWall.uasset"
 			]
 		}
 	]

@@ -10,10 +10,8 @@ UENUM(BlueprintType)
 enum class ECornerType : uint8
 {
 	None        UMETA(DisplayName = "None"),
-	TopLeft     UMETA(DisplayName = "Top Left"),
-	TopRight    UMETA(DisplayName = "Top Right"),
-	BottomLeft  UMETA(DisplayName = "Bottom Left"),
-	BottomRight UMETA(DisplayName = "Bottom Right")
+	Corner      UMETA(DisplayName = "Corner"),
+	Side        UMETA(DisplayName = "Side"),
 };
 
 struct Island {
@@ -37,6 +35,8 @@ public:
 		ECornerType type;
 		UStaticMesh* mesh;
 		int32 rotation;
+
+		UStaticMeshComponent* meshComponent = nullptr;
 	};
 
 protected:
@@ -67,4 +67,8 @@ public:
 
 	UFUNCTION(BlueprintCallable)
 	void PlaceIsland(FVector location);
+
+	int32 GetIslandIndexFromLocation(FIntPoint location);
+
+	void updateCorner(Corner* corner);
 };

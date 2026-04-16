@@ -9,6 +9,7 @@ AGridManager::AGridManager()
  	// Set this actor to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	PrimaryActorTick.bCanEverTick = true;
 
+	RootComponent = CreateDefaultSubobject<USceneComponent>(TEXT("Root"));
 }
 
 // Called when the game starts or when spawned
@@ -30,8 +31,8 @@ void AGridManager::generateIslands()
 			Island* island = new Island();
 			island->position = FIntPoint(x*tileSize, y*tileSize);
 			for(int i=0; i<4; i++) {
-				if (i == 3) {
-					index += gridSize;
+				if (i == 2) {
+					index += gridSize-1;
 					island->cornerIndices[i] = index;
 					index++;
 				}
@@ -96,5 +97,70 @@ FIntPoint AGridManager::HighlightTile(FVector location)
 
 void AGridManager::PlaceIsland(FVector location)
 {
+	FIntPoint hitPos = FIntPoint(FMath::RoundToInt(location.X / tileSize), FMath::RoundToInt(location.Y / tileSize));
+	int32 islandIndex = GetIslandIndexFromLocation(hitPos);
+	if (islandIndex < 0 || islandIndex >= islands.Num()) {
+		return;
+	}
+	//This code for corners update right here is awfully bad, absolutely will need a refactor
+	if (corners[islands[islandIndex]->cornerIndices[0]]->type == ECornerType::None) {
+		corners[islands[islandIndex]->cornerIndices[0]]->type = ECornerType::Corner;
+		corners[islands[islandIndex]->cornerIndices[0]]->rotation = 0;
+		updateCorner(corners[islands[islandIndex]->cornerIndices[0]]);
+	}
+	if (corners[islands[islandIndex]->cornerIndices[1]]->type == ECornerType::None) {
+		corners[islands[islandIndex]->cornerIndices[1]]->type = ECornerType::Corner;
+		corners[islands[islandIndex]->cornerIndices[1]]->rotation = 90;
+		updateCorner(corners[islands[islandIndex]->cornerIndices[1]]);
+	}
+	if (corners[islands[islandIndex]->cornerIndices[2]]->type == ECornerType::None) {
+		corners[islands[islandIndex]->cornerIndices[2]]->type = ECornerType::Corner;
+		corners[islands[islandIndex]->cornerIndices[2]]->rotation = 180;
+		updateCorner(corners[islands[islandIndex]->cornerIndices[2]]);
+	}
+	if (corners[islands[islandIndex]->cornerIndices[3]]->type == ECornerType::None) {
+		corners[islands[islandIndex]->cornerIndices[3]]->type = ECornerType::Corner;
+		corners[islands[islandIndex]->cornerIndices[3]]->rotation = 270;
+		updateCorner(corners[islands[islandIndex]->cornerIndices[3]]);
+	}
+	
+}
+
+int32 AGridManager::GetIslandIndexFromLocation(FIntPoint location)
+{
+	return location.Y + location.X * gridSize;
+}
+
+void AGridManager::updateCorner(Corner* corner)
+{
+	if (!corner) return;
+
+	// Assign mesh from map
+	if (cornerMeshes.Contains(corner->type))
+	{
+		corner->mesh = cornerMeshes[corner->type];
+	}
+
+	if (!corner->mesh) return;
+
+	if (!corner->meshComponent)
+	{
+		corner->meshComponent = NewObject<UStaticMeshComponent>(this);
+		corner->meshComponent->RegisterComponent();
+		corner->meshComponent->AttachToComponent(RootComponent, FAttachmentTransformRules::KeepRelativeTransform);
+	}
+
+	corner->meshComponent->SetStaticMesh(corner->mesh);
+
+	FVector worldLocation = FVector(
+		corner->position.X,
+		corner->position.Y,
+		0.f
+	);
+
+	FRotator worldRotation = FRotator(0.f, corner->rotation, 0.f);
+
+	corner->meshComponent->SetWorldLocation(worldLocation);
+	corner->meshComponent->SetWorldRotation(worldRotation);
 }
 
