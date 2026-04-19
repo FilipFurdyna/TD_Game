@@ -44,7 +44,7 @@ void AGridManager::generateIslands()
 			islands.Add(island);
 			index -= gridSize + 2;
 		}
-		index -= gridSize + 1;
+		index++;
 	}
 }
 
@@ -102,28 +102,21 @@ void AGridManager::PlaceIsland(FVector location)
 	if (islandIndex < 0 || islandIndex >= islands.Num()) {
 		return;
 	}
-	//This code for corners update right here is awfully bad, absolutely will need a refactor
-	if (corners[islands[islandIndex]->cornerIndices[0]]->type == ECornerType::None) {
-		corners[islands[islandIndex]->cornerIndices[0]]->type = ECornerType::Corner;
-		corners[islands[islandIndex]->cornerIndices[0]]->rotation = 0;
-		updateCorner(corners[islands[islandIndex]->cornerIndices[0]]);
+	static const int rotations[4] = { 90, 0, 180, 270 };
+
+	for(int i=0; i<4; i++) {
+		if (corners[islands[islandIndex]->cornerIndices[i]]->type == ECornerType::None) {
+			corners[islands[islandIndex]->cornerIndices[i]]->type = ECornerType::Corner;
+			corners[islands[islandIndex]->cornerIndices[i]]->rotation = rotations[i];
+			
+		}
+		else if (corners[islands[islandIndex]->cornerIndices[i]]->type == ECornerType::Corner) {
+			corners[islands[islandIndex]->cornerIndices[i]]->type = ECornerType::Side;
+		}
+
+		updateCorner(corners[islands[islandIndex]->cornerIndices[i]]);
 	}
-	if (corners[islands[islandIndex]->cornerIndices[1]]->type == ECornerType::None) {
-		corners[islands[islandIndex]->cornerIndices[1]]->type = ECornerType::Corner;
-		corners[islands[islandIndex]->cornerIndices[1]]->rotation = 90;
-		updateCorner(corners[islands[islandIndex]->cornerIndices[1]]);
-	}
-	if (corners[islands[islandIndex]->cornerIndices[2]]->type == ECornerType::None) {
-		corners[islands[islandIndex]->cornerIndices[2]]->type = ECornerType::Corner;
-		corners[islands[islandIndex]->cornerIndices[2]]->rotation = 180;
-		updateCorner(corners[islands[islandIndex]->cornerIndices[2]]);
-	}
-	if (corners[islands[islandIndex]->cornerIndices[3]]->type == ECornerType::None) {
-		corners[islands[islandIndex]->cornerIndices[3]]->type = ECornerType::Corner;
-		corners[islands[islandIndex]->cornerIndices[3]]->rotation = 270;
-		updateCorner(corners[islands[islandIndex]->cornerIndices[3]]);
-	}
-	
+
 }
 
 int32 AGridManager::GetIslandIndexFromLocation(FIntPoint location)
