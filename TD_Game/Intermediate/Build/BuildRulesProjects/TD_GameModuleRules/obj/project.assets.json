@@ -7052,24 +7052,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Filip_LC\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Users\\Deus_Volt\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Filip_LC\\Documents\\GitHub\\TD_Game\\TD_Game\\Intermediate\\Build\\BuildRulesProjects\\TD_GameModuleRules\\TD_GameModuleRules.csproj",
+      "projectUniqueName": "C:\\Users\\Deus_Volt\\Documents\\GitHub\\TD_Game\\TD_Game\\Intermediate\\Build\\BuildRulesProjects\\TD_GameModuleRules\\TD_GameModuleRules.csproj",
       "projectName": "TD_GameModuleRules",
-      "projectPath": "C:\\Users\\Filip_LC\\Documents\\GitHub\\TD_Game\\TD_Game\\Intermediate\\Build\\BuildRulesProjects\\TD_GameModuleRules\\TD_GameModuleRules.csproj",
-      "packagesPath": "C:\\Users\\Filip_LC\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Filip_LC\\Documents\\GitHub\\TD_Game\\TD_Game\\Intermediate\\Build\\BuildRulesProjects\\TD_GameModuleRules\\obj\\",
+      "projectPath": "C:\\Users\\Deus_Volt\\Documents\\GitHub\\TD_Game\\TD_Game\\Intermediate\\Build\\BuildRulesProjects\\TD_GameModuleRules\\TD_GameModuleRules.csproj",
+      "packagesPath": "C:\\Users\\Deus_Volt\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Deus_Volt\\Documents\\GitHub\\TD_Game\\TD_Game\\Intermediate\\Build\\BuildRulesProjects\\TD_GameModuleRules\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-      ],
       "configFilePaths": [
-        "C:\\Users\\Filip_LC\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Users\\Deus_Volt\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -7129,7 +7124,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.301/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.305/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

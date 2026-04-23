@@ -1,8 +1,8 @@
 {
 	"SourceFiles": [
-		"C:\\Users\\Filip_LC\\Documents\\GitHub\\TD_Game\\TD_Game\\Source\\TD_Game\\TD_Game.Build.cs",
-		"C:\\Users\\Filip_LC\\Documents\\GitHub\\TD_Game\\TD_Game\\Source\\TD_Game.Target.cs",
-		"C:\\Users\\Filip_LC\\Documents\\GitHub\\TD_Game\\TD_Game\\Source\\TD_GameEditor.Target.cs"
+		"C:\\Users\\Deus_Volt\\Documents\\GitHub\\TD_Game\\TD_Game\\Source\\TD_Game\\TD_Game.Build.cs",
+		"C:\\Users\\Deus_Volt\\Documents\\GitHub\\TD_Game\\TD_Game\\Source\\TD_Game.Target.cs",
+		"C:\\Users\\Deus_Volt\\Documents\\GitHub\\TD_Game\\TD_Game\\Source\\TD_GameEditor.Target.cs"
 	],
 	"EngineVersion": "5.7.4"
 }

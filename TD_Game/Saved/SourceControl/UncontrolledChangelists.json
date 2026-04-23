@@ -5,8 +5,6 @@
 			"guid": "00000000000000000000000000000000",
 			"description": "Default Uncontrolled Changelist",
 			"files": [
-				"C:/Users/Filip_LC/Documents/GitHub/TD_Game/TD_Game/Content/IslandsSystem/Corners/test/cornerWall.uasset",
-				"C:/Users/Filip_LC/Documents/GitHub/TD_Game/TD_Game/Content/IslandsSystem/Corners/test/sideWall.uasset",
 				"C:/Users/Deus_Volt/Documents/GitHub/TD_Game/TD_Game/Content/TestLevel_HLOD0_Instancing.uasset",
 				"C:/Users/Deus_Volt/Documents/GitHub/TD_Game/TD_Game/Content/__ExternalActors__/TestLevel/D/KN/9R9P0RDFT42JHZ7D5NAFN0.uasset",
 				"C:/Users/Deus_Volt/Documents/GitHub/TD_Game/TD_Game/Content/__ExternalObjects__/TestLevel/8/EC/MQQBNZPPNBWZ3ETRE7HU8A.uasset",
@@ -158,13 +156,18 @@
 				"C:/Users/Deus_Volt/Documents/GitHub/TD_Game/TD_Game/Content/Player/Input/Gameplay/IA_Move.uasset",
 				"C:/Users/Deus_Volt/Documents/GitHub/TD_Game/TD_Game/Content/Player/Input/Gameplay/IMC_Gameplay.uasset",
 				"C:/Users/Deus_Volt/Documents/GitHub/TD_Game/TD_Game/Content/Player/BP_GameModeGameplay.uasset",
-				"C:/Users/Deus_Volt/Documents/GitHub/TD_Game/TD_Game/Content/__ExternalActors__/TestLevel/9/VR/1U3SM87THB685EZPJOET5Q.uasset",
 				"C:/Users/Deus_Volt/Documents/GitHub/TD_Game/TD_Game/Content/__ExternalActors__/TestLevel/1/7R/9NYIK5YNLHCK6TE4DXGAW3.uasset",
 				"C:/Users/Deus_Volt/Documents/GitHub/TD_Game/TD_Game/Content/Player/Input/Gameplay/IA_placeIsland.uasset",
 				"C:/Users/Deus_Volt/Documents/GitHub/TD_Game/TD_Game/Content/IslandsSystem/Corners/test/cornerWall.uasset",
 				"C:/Users/Deus_Volt/Documents/GitHub/TD_Game/TD_Game/Content/IslandsSystem/Corners/test/grass.uasset",
 				"C:/Users/Deus_Volt/Documents/GitHub/TD_Game/TD_Game/Content/IslandsSystem/Corners/test/marble.uasset",
-				"C:/Users/Deus_Volt/Documents/GitHub/TD_Game/TD_Game/Content/IslandsSystem/Corners/test/sideWall.uasset"
+				"C:/Users/Deus_Volt/Documents/GitHub/TD_Game/TD_Game/Content/IslandsSystem/Corners/test/sideWall.uasset",
+				"C:/Users/Deus_Volt/Documents/GitHub/TD_Game/TD_Game/Content/IslandsSystem/Corners/test/centerWall.uasset",
+				"C:/Users/Deus_Volt/Documents/GitHub/TD_Game/TD_Game/Content/IslandsSystem/Corners/test/doubleCorner.uasset",
+				"C:/Users/Deus_Volt/Documents/GitHub/TD_Game/TD_Game/Content/IslandsSystem/Corners/test/innerCorner.uasset",
+				"C:/Users/Filip_LC/Documents/GitHub/TD_Game/TD_Game/Content/IslandsSystem/Corners/test/cornerWall.uasset",
+				"C:/Users/Filip_LC/Documents/GitHub/TD_Game/TD_Game/Content/IslandsSystem/Corners/test/sideWall.uasset",
+				"C:/Users/Deus_Volt/Documents/GitHub/TD_Game/TD_Game/Content/__ExternalActors__/TestLevel/9/VR/1U3SM87THB685EZPJOET5Q.uasset"
 			]
 		}
 	]

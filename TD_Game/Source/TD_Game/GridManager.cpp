@@ -68,6 +68,116 @@ void AGridManager::generateCorners()
 	}
 }
 
+int32 AGridManager::GetIslandIndex(int32 x, int32 y)
+{
+	if (x < 0 || y < 0 || x >= gridSize || y >= gridSize)
+		return INDEX_NONE;
+
+	return x * gridSize + y;
+}
+
+uint8 AGridManager::ComputeCornerMask(int32 cornerX, int32 cornerY)
+{
+	uint8 mask = 0;
+
+	// surrounding islands
+	int32 i0 = GetIslandIndex(cornerX - 1, cornerY - 1); // TL
+	int32 i1 = GetIslandIndex(cornerX, cornerY - 1); // TR
+	int32 i2 = GetIslandIndex(cornerX - 1, cornerY);     // BL
+	int32 i3 = GetIslandIndex(cornerX, cornerY);     // BR
+
+	if (i0 != INDEX_NONE && islands[i0]->isPlaced) mask |= TopLeft;
+	if (i1 != INDEX_NONE && islands[i1]->isPlaced) mask |= TopRight;
+	if (i2 != INDEX_NONE && islands[i2]->isPlaced) mask |= BottomLeft;
+	if (i3 != INDEX_NONE && islands[i3]->isPlaced) mask |= BottomRight;
+
+	return mask;
+}
+
+void AGridManager::ResolveCorner(uint8 mask, ECornerType& outType, int32& outRotation)
+{
+	switch (mask)
+	{
+	case 0:
+		outType = ECornerType::None;
+		break;
+	//Corners
+	case TopLeft:
+		outType = ECornerType::Corner;
+		outRotation = 270;
+		break;
+
+	case TopRight:
+		outType = ECornerType::Corner;
+		outRotation = 0;
+		break;
+
+	case BottomLeft:
+		outType = ECornerType::Corner;
+		outRotation = 180;
+		break;
+
+	case BottomRight:
+		outType = ECornerType::Corner;
+		outRotation = 90;
+		break;
+	//Sides
+	case TopLeft | TopRight:
+		outType = ECornerType::Side;
+		outRotation = 270;
+		break;
+
+	case BottomLeft | BottomRight:
+		outType = ECornerType::Side;
+		outRotation = 90;
+		break;
+
+	case TopLeft | BottomLeft:
+		outType = ECornerType::Side;
+		outRotation = 180;
+		break;
+
+	case TopRight | BottomRight:
+		outType = ECornerType::Side;
+		outRotation = 0;
+		break;
+	//Double Corner (two islands with one vertex)
+	case TopLeft | BottomRight:
+	case TopRight | BottomLeft:
+		outType = ECornerType::DoubleCorner;
+		break;
+	//L Shapes
+	case TopRight | BottomLeft | BottomRight: // missing TL
+		outType = ECornerType::InnerCorner;
+		outRotation = 90;
+		return;
+
+	case TopLeft | BottomLeft | BottomRight: // missing TR
+		outType = ECornerType::InnerCorner;
+		outRotation = 180;
+		return;
+
+	case TopLeft | TopRight | BottomRight: // missing BL
+		outType = ECornerType::InnerCorner;
+		outRotation = 0;
+		return;
+
+	case TopLeft | TopRight | BottomLeft: // missing BR
+		outType = ECornerType::InnerCorner;
+		outRotation = 270;
+		return;
+
+	
+	case 15:
+		outType = ECornerType::Center;
+		break;
+
+	default:
+		outType = ECornerType::Center;
+		break;
+	}
+}
+
 void AGridManager::DebugViewGrid()
 {
 	for(Island* island : islands) {
@@ -102,21 +212,22 @@ void AGridManager::PlaceIsland(FVector location)
 	if (islandIndex < 0 || islandIndex >= islands.Num()) {
 		return;
 	}
-	static const int rotations[4] = { 90, 0, 180, 270 };
-
-	for(int i=0; i<4; i++) {
-		if (corners[islands[islandIndex]->cornerIndices[i]]->type == ECornerType::None) {
-			corners[islands[islandIndex]->cornerIndices[i]]->type = ECornerType::Corner;
-			corners[islands[islandIndex]->cornerIndices[i]]->rotation = rotations[i];
-			
-		}
-		else if (corners[islands[islandIndex]->cornerIndices[i]]->type == ECornerType::Corner) {
-			corners[islands[islandIndex]->cornerIndices[i]]->type = ECornerType::Side;
-		}
-
-		updateCorner(corners[islands[islandIndex]->cornerIndices[i]]);
+	if(islands[islandIndex]->isPlaced) {
+		return;
 	}
+	Island* island = islands[islandIndex];
+	island->isPlaced = true;
 
+	for (int i = 0; i < 4; i++)
+	{
+		int32 cornerIndex = island->cornerIndices[i];
+
+		int32 x = cornerIndex / (gridSize + 1);
+		int32 y = cornerIndex % (gridSize + 1);
+
+		updateCorner(x,y);
+	}
+	island->isPlaced = true;
 }
 
 int32 AGridManager::GetIslandIndexFromLocation(FIntPoint location)
@@ -124,17 +235,23 @@ int32 AGridManager::GetIslandIndexFromLocation(FIntPoint location)
 	return location.Y + location.X * gridSize;
 }
 
-void AGridManager::updateCorner(Corner* corner)
+void AGridManager::updateCorner(int32 cornerX, int32 cornerY)
 {
-	if (!corner) return;
+	int32 index = cornerX * (gridSize + 1) + cornerY;
+	Corner* corner = corners[index];
 
-	// Assign mesh from map
-	if (cornerMeshes.Contains(corner->type))
-	{
-		corner->mesh = cornerMeshes[corner->type];
-	}
+	uint8 mask = ComputeCornerMask(cornerX, cornerY);
 
-	if (!corner->mesh) return;
+	ECornerType newType;
+	int32 rotation = 0;
+
+	ResolveCorner(mask, newType, rotation);
+
+	corner->type = newType;
+	corner->rotation = rotation;
+
+	// Assign mesh based on type
+	corner->mesh = cornerMeshes[newType]; // TMap<ECornerType, UStaticMesh*>
 
 	if (!corner->meshComponent)
 	{
@@ -144,16 +261,6 @@ void AGridManager::updateCorner(Corner* corner)
 	}
 
 	corner->meshComponent->SetStaticMesh(corner->mesh);
-
-	FVector worldLocation = FVector(
-		corner->position.X,
-		corner->position.Y,
-		0.f
-	);
-
-	FRotator worldRotation = FRotator(0.f, corner->rotation, 0.f);
-
-	corner->meshComponent->SetWorldLocation(worldLocation);
-	corner->meshComponent->SetWorldRotation(worldRotation);
+	corner->meshComponent->SetRelativeLocation(FVector(corner->position));
+	corner->meshComponent->SetRelativeRotation(FRotator(0, rotation, 0));
 }
-

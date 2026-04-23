@@ -9,14 +9,27 @@
 UENUM(BlueprintType)
 enum class ECornerType : uint8
 {
-	None        UMETA(DisplayName = "None"),
-	Corner      UMETA(DisplayName = "Corner"),
-	Side        UMETA(DisplayName = "Side"),
+	None         UMETA(DisplayName = "None"),
+	Corner       UMETA(DisplayName = "Corner"),
+	Side         UMETA(DisplayName = "Side"),
+	Center		 UMETA(DisplayName = "Center"),
+	InnerCorner  UMETA(DisplayName = "Inner Corner"),
+	DoubleCorner UMETA(DisplayName = "Double Corner")
+};
+
+enum ECornerMask
+{
+	TopLeft = 1 << 0, // 0001
+	TopRight = 1 << 1, // 0010
+	BottomLeft = 1 << 2, // 0100
+	BottomRight = 1 << 3  // 1000
 };
 
 struct Island {
 		FIntPoint position;
 		int32 cornerIndices[4];
+
+		bool isPlaced=false;
 };
 
 
@@ -35,7 +48,6 @@ public:
 		ECornerType type;
 		UStaticMesh* mesh;
 		int32 rotation;
-
 		UStaticMeshComponent* meshComponent = nullptr;
 	};
 
@@ -45,6 +57,11 @@ protected:
 
 	void generateIslands();
 	void generateCorners();
+
+	int32 GetIslandIndex(int32 x, int32 y);
+	uint8 ComputeCornerMask(int32 cornerX, int32 cornerY);
+
+	void ResolveCorner(uint8 mask, ECornerType& outType, int32& outRotation);
 
 	void DebugViewGrid();
 
@@ -70,5 +87,5 @@ public:
 
 	int32 GetIslandIndexFromLocation(FIntPoint location);
 
-	void updateCorner(Corner* corner);
+	void updateCorner(int32 cornerX, int32 cornerY);
 };

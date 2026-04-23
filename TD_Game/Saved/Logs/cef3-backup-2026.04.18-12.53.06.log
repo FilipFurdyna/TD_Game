@@ -1,24 +1,0 @@
-[20564:22188:0418/145301.447:WARNING:chrome_main_delegate.cc(745)] This is Chrome version 128.0.6613.138 (not a warning)
-[20564:22188:0418/145301.465:ERROR:os_crypt_win.cc(100)] Failed to decrypt: Nieprawidłowy klucz do użycia w podanym stanie. (0x8009000B)
-[20564:33652:0418/145301.496:ERROR:google_update_settings.cc(265)] Failed opening key Software\Chromium to set usagestats; result: 5
-[20564:22188:0418/145301.508:WARNING:account_consistency_mode_manager.cc(77)] Desktop Identity Consistency cannot be enabled as no OAuth client ID and client secret have been configured.
-[20564:18580:0418/145304.230:WARNING:leveldb_database.cc(141)] Unable to open C:\Users\Filip_LC\Documents\GitHub\TD_Game\TD_Game\Saved\webcache_6613\Default\shared_proto_db\metadata: IO error: C:\Users\Filip_LC\Documents\GitHub\TD_Game\TD_Game\Saved\webcache_6613\Default\shared_proto_db\metadata/MANIFEST-000001: Unable to create sequential file (ChromeMethodBFE: 7::NewSequentialFile::1)
-[20564:18580:0418/145304.235:WARNING:leveldb_database.cc(141)] Unable to open C:\Users\Filip_LC\Documents\GitHub\TD_Game\TD_Game\Saved\webcache_6613\Default\shared_proto_db\metadata: IO error: C:\Users\Filip_LC\Documents\GitHub\TD_Game\TD_Game\Saved\webcache_6613\Default\shared_proto_db\metadata/MANIFEST-000001: Unable to create sequential file (ChromeMethodBFE: 7::NewSequentialFile::1)
-[20564:18580:0418/145304.239:WARNING:leveldb_database.cc(141)] Unable to open C:\Users\Filip_LC\Documents\GitHub\TD_Game\TD_Game\Saved\webcache_6613\Default\shared_proto_db\metadata: IO error: C:\Users\Filip_LC\Documents\GitHub\TD_Game\TD_Game\Saved\webcache_6613\Default\shared_proto_db\metadata/MANIFEST-000001: Unable to create sequential file (ChromeMethodBFE: 7::NewSequentialFile::1)
-[20564:18580:0418/145304.242:WARNING:leveldb_database.cc(141)] Unable to open C:\Users\Filip_LC\Documents\GitHub\TD_Game\TD_Game\Saved\webcache_6613\Default\shared_proto_db\metadata: IO error: C:\Users\Filip_LC\Documents\GitHub\TD_Game\TD_Game\Saved\webcache_6613\Default\shared_proto_db\metadata/MANIFEST-000001: Unable to create sequential file (ChromeMethodBFE: 7::NewSequentialFile::1)
-[20564:18580:0418/145304.629:WARNING:value_store_frontend.cc(47)] Reading ahfgeienlihckogmohjhadlkjgocpleb.alarms from  failed: IO error: .../MANIFEST-000001: Unable to create sequential file (ChromeMethodBFE: 7::NewSequentialFile::1)
-[20564:18580:0418/145304.637:WARNING:value_store_frontend.cc(47)] Reading mhjfbmdgcfjbbpaeojofohoefgiehjai.alarms from  failed: IO error: .../MANIFEST-000001: Unable to create sequential file (ChromeMethodBFE: 7::NewSequentialFile::1)
-[31332:27972:0418/145305.824:WARNING:frame_impl.cc(430)] virtual CefFrameImpl::SendProcessMessage sent to detached frame 5-C29C776D0EB1746D2B4803DB2177C65D will be ignored
-[29764:22596:0418/145306.164:WARNING:backend_impl.cc(1764)] Destroying invalid entry.
-[29764:22596:0418/145306.184:ERROR:backend_impl.cc(989)] Critical error found -8
-[29764:22596:0418/145306.184:WARNING:storage_block-inl.h(138)] Failed data load.
-[29764:22596:0418/145306.184:WARNING:storage_block-inl.h(138)] Failed data load.
-[29764:22596:0418/145306.184:ERROR:entry_impl.cc(1029)] No file for c103004e
-[29764:22596:0418/145306.185:WARNING:storage_block-inl.h(138)] Failed data load.
-[29764:22596:0418/145306.188:ERROR:entry_impl.cc(955)] Failed to save user data
-[29764:22596:0418/145306.287:WARNING:storage_block-inl.h(138)] Failed data load.
-[29764:22596:0418/145306.287:WARNING:storage_block-inl.h(138)] Failed data load.
-[29764:22596:0418/145306.287:WARNING:storage_block-inl.h(138)] Failed data load.
-[29764:22596:0418/145306.337:WARNING:storage_block-inl.h(138)] Failed data load.
-[29764:22596:0418/145306.337:WARNING:storage_block-inl.h(138)] Failed data load.
-[29764:22596:0418/145306.338:WARNING:storage_block-inl.h(138)] Failed data load.
