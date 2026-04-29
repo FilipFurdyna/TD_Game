@@ -1,0 +1,19 @@
+[6400:10300:0428/162722.236:WARNING:chrome_main_delegate.cc(745)] This is Chrome version 128.0.6613.138 (not a warning)
+[6400:5972:0428/162722.481:ERROR:google_update_settings.cc(265)] Failed opening key Software\Chromium to set usagestats; result: 5
+[6400:10300:0428/162722.650:WARNING:account_consistency_mode_manager.cc(77)] Desktop Identity Consistency cannot be enabled as no OAuth client ID and client secret have been configured.
+[16772:1708:0428/162733.678:WARNING:frame_impl.cc(430)] virtual CefFrameImpl::SendProcessMessage sent to detached frame 5-206554BC42265547EE928469EE09AB06 will be ignored
+[6400:5972:0428/172422.398:ERROR:cert_verify_proc_builtin.cc(1063)] CertVerifyProcBuiltin for optimizationguide-pa.googleapis.com failed:
+----- Certificate i=1 (emailAddress=mobile@huawei.com,CN=root.home,L=Wuhan,ST=Hubei,C=CN) -----
+ERROR: No matching issuer found
+
+
+[19356:18720:0428/172422.732:ERROR:ssl_client_socket_impl.cc(882)] handshake failed; returned -1, SSL error code 1, net_error -202
+[19356:14900:0428/172533.192:WARNING:dns_config_service_win.cc(605)] Failed to read DnsConfig.
+[6400:7208:0428/172533.195:WARNING:dns_config_service_win.cc(605)] Failed to read DnsConfig.
+[19356:6812:0428/172538.202:WARNING:dns_config_service_win.cc(605)] Failed to read DnsConfig.
+[6400:5972:0428/172538.203:WARNING:dns_config_service_win.cc(605)] Failed to read DnsConfig.
+[19356:6812:0428/172548.219:WARNING:dns_config_service_win.cc(605)] Failed to read DnsConfig.
+[6400:7208:0428/172548.220:WARNING:dns_config_service_win.cc(605)] Failed to read DnsConfig.
+[6400:5972:0428/172608.224:WARNING:dns_config_service_win.cc(605)] Failed to read DnsConfig.
+[19356:6812:0428/172608.243:WARNING:dns_config_service_win.cc(605)] Failed to read DnsConfig.
+[6400:10300:0428/174749.636:WARNING:pref_notifier_impl.cc(41)] Pref observer for media_router.cast_allow_all_ips found at shutdown.

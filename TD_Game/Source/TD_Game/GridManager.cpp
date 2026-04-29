@@ -143,26 +143,29 @@ void AGridManager::ResolveCorner(uint8 mask, ECornerType& outType, int32& outRot
 		break;
 	//Double Corner (two islands with one vertex)
 	case TopLeft | BottomRight:
+		outType = ECornerType::DoubleCorner;
+		outRotation = 90;
+		break;
 	case TopRight | BottomLeft:
 		outType = ECornerType::DoubleCorner;
 		break;
 	//L Shapes
-	case TopRight | BottomLeft | BottomRight: // missing TL
+	case TopRight | BottomLeft | BottomRight: //  TL
 		outType = ECornerType::InnerCorner;
 		outRotation = 90;
 		return;
 
-	case TopLeft | BottomLeft | BottomRight: // missing TR
+	case TopLeft | BottomLeft | BottomRight: //  TR
 		outType = ECornerType::InnerCorner;
 		outRotation = 180;
 		return;
 
-	case TopLeft | TopRight | BottomRight: // missing BL
+	case TopLeft | TopRight | BottomRight: //  BL
 		outType = ECornerType::InnerCorner;
 		outRotation = 0;
 		return;
 
-	case TopLeft | TopRight | BottomLeft: // missing BR
+	case TopLeft | TopRight | BottomLeft: //  BR
 		outType = ECornerType::InnerCorner;
 		outRotation = 270;
 		return;
@@ -218,6 +221,8 @@ void AGridManager::PlaceIsland(FVector location)
 	Island* island = islands[islandIndex];
 	island->isPlaced = true;
 
+
+
 	for (int i = 0; i < 4; i++)
 	{
 		int32 cornerIndex = island->cornerIndices[i];
@@ -263,4 +268,6 @@ void AGridManager::updateCorner(int32 cornerX, int32 cornerY)
 	corner->meshComponent->SetStaticMesh(corner->mesh);
 	corner->meshComponent->SetRelativeLocation(FVector(corner->position));
 	corner->meshComponent->SetRelativeRotation(FRotator(0, rotation, 0));
+	corner->meshComponent->SetCanEverAffectNavigation(true);
+	corner->meshComponent->SetCollisionProfileName("BlockAll");
 }
