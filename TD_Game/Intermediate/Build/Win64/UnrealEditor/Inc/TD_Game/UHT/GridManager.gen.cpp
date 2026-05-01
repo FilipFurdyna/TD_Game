@@ -324,7 +324,7 @@ AGridManager::~AGridManager() {}
 // ********** End Class AGridManager ***************************************************************
 
 // ********** Begin Registration *******************************************************************
-struct Z_CompiledInDeferFile_FID_Users_Deus_Volt_Documents_GitHub_TD_Game_TD_Game_Source_TD_Game_GridManager_h__Script_TD_Game_Statics
+struct Z_CompiledInDeferFile_FID_Users_Filip_LC_Documents_GitHub_TD_Game_TD_Game_Source_TD_Game_GridManager_h__Script_TD_Game_Statics
 {
 	static constexpr FEnumRegisterCompiledInInfo EnumInfo[] = {
 		{ ECornerType_StaticEnum, TEXT("ECornerType"), &Z_Registration_Info_UEnum_ECornerType, CONSTRUCT_RELOAD_VERSION_INFO(FEnumReloadVersionInfo, 2587144127U) },
@@ -332,12 +332,12 @@ struct Z_CompiledInDeferFile_FID_Users_Deus_Volt_Documents_GitHub_TD_Game_TD_Gam
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
 		{ Z_Construct_UClass_AGridManager, AGridManager::StaticClass, TEXT("AGridManager"), &Z_Registration_Info_UClass_AGridManager, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AGridManager), 1030561169U) },
 	};
-}; // Z_CompiledInDeferFile_FID_Users_Deus_Volt_Documents_GitHub_TD_Game_TD_Game_Source_TD_Game_GridManager_h__Script_TD_Game_Statics 
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Deus_Volt_Documents_GitHub_TD_Game_TD_Game_Source_TD_Game_GridManager_h__Script_TD_Game_474506555{
+}; // Z_CompiledInDeferFile_FID_Users_Filip_LC_Documents_GitHub_TD_Game_TD_Game_Source_TD_Game_GridManager_h__Script_TD_Game_Statics 
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Filip_LC_Documents_GitHub_TD_Game_TD_Game_Source_TD_Game_GridManager_h__Script_TD_Game_474506555{
 	TEXT("/Script/TD_Game"),
-	Z_CompiledInDeferFile_FID_Users_Deus_Volt_Documents_GitHub_TD_Game_TD_Game_Source_TD_Game_GridManager_h__Script_TD_Game_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_Deus_Volt_Documents_GitHub_TD_Game_TD_Game_Source_TD_Game_GridManager_h__Script_TD_Game_Statics::ClassInfo),
+	Z_CompiledInDeferFile_FID_Users_Filip_LC_Documents_GitHub_TD_Game_TD_Game_Source_TD_Game_GridManager_h__Script_TD_Game_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_Filip_LC_Documents_GitHub_TD_Game_TD_Game_Source_TD_Game_GridManager_h__Script_TD_Game_Statics::ClassInfo),
 	nullptr, 0,
-	Z_CompiledInDeferFile_FID_Users_Deus_Volt_Documents_GitHub_TD_Game_TD_Game_Source_TD_Game_GridManager_h__Script_TD_Game_Statics::EnumInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_Deus_Volt_Documents_GitHub_TD_Game_TD_Game_Source_TD_Game_GridManager_h__Script_TD_Game_Statics::EnumInfo),
+	Z_CompiledInDeferFile_FID_Users_Filip_LC_Documents_GitHub_TD_Game_TD_Game_Source_TD_Game_GridManager_h__Script_TD_Game_Statics::EnumInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_Filip_LC_Documents_GitHub_TD_Game_TD_Game_Source_TD_Game_GridManager_h__Script_TD_Game_Statics::EnumInfo),
 };
 // ********** End Registration *********************************************************************
 
