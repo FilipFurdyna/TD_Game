@@ -2,8 +2,14 @@
 	"RemapUnityFiles": 
 	{
 		"Module.TD_Game.gen.cpp.obj": [
+			"Enemy.gen.cpp.obj",
+			"EnemyController.gen.cpp.obj",
 			"GridManager.gen.cpp.obj",
-			"TD_Game.init.gen.cpp.obj"
+			"PlayerBase.gen.cpp.obj",
+			"Projectile.gen.cpp.obj",
+			"TD_Game.init.gen.cpp.obj",
+			"Tower.gen.cpp.obj",
+			"TowersManager.gen.cpp.obj"
 		]
 	}
 }

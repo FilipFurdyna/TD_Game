@@ -200,7 +200,7 @@ void AGridManager::Tick(float DeltaTime)
 
 FIntPoint AGridManager::HighlightTile(FVector location)
 {
-	FIntPoint hitPos = FIntPoint(FMath::RoundToInt(location.X/tileSize), FMath::RoundToInt(location.Y/tileSize));
+	FIntPoint hitPos = getGridLocation(location);
 	if(hitPos.X < 0 || hitPos.X >= gridSize || hitPos.Y < 0 || hitPos.Y >= gridSize) {
 		return FIntPoint(-1, -1);
 	}
@@ -210,7 +210,7 @@ FIntPoint AGridManager::HighlightTile(FVector location)
 
 void AGridManager::PlaceIsland(FVector location)
 {
-	FIntPoint hitPos = FIntPoint(FMath::RoundToInt(location.X / tileSize), FMath::RoundToInt(location.Y / tileSize));
+	FIntPoint hitPos = getGridLocation(location);
 	int32 islandIndex = GetIslandIndexFromLocation(hitPos);
 	if (islandIndex < 0 || islandIndex >= islands.Num()) {
 		return;
@@ -238,6 +238,15 @@ void AGridManager::PlaceIsland(FVector location)
 int32 AGridManager::GetIslandIndexFromLocation(FIntPoint location)
 {
 	return location.Y + location.X * gridSize;
+}
+
+FIntPoint AGridManager::getGridLocation(FVector loc)
+{
+	FIntPoint result = FIntPoint(FMath::RoundToInt(loc.X / tileSize), FMath::RoundToInt(loc.Y / tileSize));
+	if (result.X < 0 || result.X >= gridSize || result.Y < 0 || result.Y >= gridSize) {
+		return FIntPoint(-1, -1);
+	}
+	return result;
 }
 
 void AGridManager::updateCorner(int32 cornerX, int32 cornerY)
@@ -270,4 +279,9 @@ void AGridManager::updateCorner(int32 cornerX, int32 cornerY)
 	corner->meshComponent->SetRelativeRotation(FRotator(0, rotation, 0));
 	corner->meshComponent->SetCanEverAffectNavigation(true);
 	corner->meshComponent->SetCollisionProfileName("BlockAll");
+}
+
+void AGridManager::setOccupied(int32 islandIndex)
+{
+	islands[islandIndex]->isOccupied = true;
 }

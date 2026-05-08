@@ -1,3 +1,8 @@
-2026/05/01-15:29:35.369 29a4 Reusing MANIFEST C:\Users\Filip_LC\Documents\GitHub\TD_Game\TD_Game\Saved\webcache_6613\Default\Local Storage\leveldb/MANIFEST-000001
-2026/05/01-15:29:35.375 29a4 Recovering log #9
-2026/05/01-15:29:35.378 29a4 Reusing old log C:\Users\Filip_LC\Documents\GitHub\TD_Game\TD_Game\Saved\webcache_6613\Default\Local Storage\leveldb/000009.log 
+2026/05/08-17:25:34.574 94c Reusing MANIFEST C:\Users\Filip_LC\Documents\GitHub\TD_Game\TD_Game\Saved\webcache_6613\Default\Local Storage\leveldb/MANIFEST-000001
+2026/05/08-17:25:34.580 94c Recovering log #16
+2026/05/08-17:25:34.581 94c Level-0 table #19: started
+2026/05/08-17:25:34.587 94c Level-0 table #19: 67783 bytes OK
+2026/05/08-17:25:34.587 94c Recovering log #19
+2026/05/08-17:25:34.590 94c Reusing old log C:\Users\Filip_LC\Documents\GitHub\TD_Game\TD_Game\Saved\webcache_6613\Default\Local Storage\leveldb/000019.log 
+2026/05/08-17:25:34.591 94c Delete type=0 #16
+2026/05/08-17:25:34.592 94c Delete type=2 #20

@@ -17,13 +17,13 @@ static_assert(!UE_WITH_CONSTINIT_UOBJECT, "This generated code can only be compi
 			nullptr,
 			0,
 			PKG_CompiledIn | 0x00000000,
-			0xEF50BCBB,
-			0x78C8118F,
+			0x0DA5121A,
+			0x407252EE,
 			METADATA_PARAMS(0, nullptr)
 		};
 		UECodeGen_Private::ConstructUPackage(Z_Registration_Info_UPackage__Script_TD_Game.OuterSingleton, PackageParams);
 	}
 	return Z_Registration_Info_UPackage__Script_TD_Game.OuterSingleton;
 }
-static FRegisterCompiledInInfo Z_CompiledInDeferPackage_UPackage__Script_TD_Game(Z_Construct_UPackage__Script_TD_Game, TEXT("/Script/TD_Game"), Z_Registration_Info_UPackage__Script_TD_Game, CONSTRUCT_RELOAD_VERSION_INFO(FPackageReloadVersionInfo, 0xEF50BCBB, 0x78C8118F));
+static FRegisterCompiledInInfo Z_CompiledInDeferPackage_UPackage__Script_TD_Game(Z_Construct_UPackage__Script_TD_Game, TEXT("/Script/TD_Game"), Z_Registration_Info_UPackage__Script_TD_Game, CONSTRUCT_RELOAD_VERSION_INFO(FPackageReloadVersionInfo, 0x0DA5121A, 0x407252EE));
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

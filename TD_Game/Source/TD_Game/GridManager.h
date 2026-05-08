@@ -31,6 +31,7 @@ struct Island {
 		int32 cornerIndices[4];
 
 		bool isPlaced=false;
+		bool isOccupied = false;
 };
 
 
@@ -88,5 +89,9 @@ public:
 
 	int32 GetIslandIndexFromLocation(FIntPoint location);
 
+	FIntPoint getGridLocation(FVector loc);
+
 	void updateCorner(int32 cornerX, int32 cornerY);
+
+	void setOccupied(int32 islandIndex);
 };

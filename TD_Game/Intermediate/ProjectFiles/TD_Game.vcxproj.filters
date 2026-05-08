@@ -29,10 +29,34 @@
     <Filter Include="Source\TD_Game">
       <UniqueIdentifier>{58AE824D-AFF7-39D3-95A1-14DA2A855E83}</UniqueIdentifier>
     </Filter>
+    <ClCompile Include="..\..\Source\TD_Game\Enemy.cpp">
+      <Filter>Source\TD_Game</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\TD_Game\Enemy.h">
+      <Filter>Source\TD_Game</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\TD_Game\EnemyController.cpp">
+      <Filter>Source\TD_Game</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\TD_Game\EnemyController.h">
+      <Filter>Source\TD_Game</Filter>
+    </ClInclude>
     <ClCompile Include="..\..\Source\TD_Game\GridManager.cpp">
       <Filter>Source\TD_Game</Filter>
     </ClCompile>
     <ClInclude Include="..\..\Source\TD_Game\GridManager.h">
+      <Filter>Source\TD_Game</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\TD_Game\PlayerBase.cpp">
+      <Filter>Source\TD_Game</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\TD_Game\PlayerBase.h">
+      <Filter>Source\TD_Game</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\TD_Game\Projectile.cpp">
+      <Filter>Source\TD_Game</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\TD_Game\Projectile.h">
       <Filter>Source\TD_Game</Filter>
     </ClInclude>
     <None Include="..\..\Source\TD_Game\TD_Game.Build.cs">
@@ -42,6 +66,18 @@
       <Filter>Source\TD_Game</Filter>
     </ClCompile>
     <ClInclude Include="..\..\Source\TD_Game\TD_Game.h">
+      <Filter>Source\TD_Game</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\TD_Game\Tower.cpp">
+      <Filter>Source\TD_Game</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\TD_Game\Tower.h">
+      <Filter>Source\TD_Game</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\TD_Game\TowersManager.cpp">
+      <Filter>Source\TD_Game</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\TD_Game\TowersManager.h">
       <Filter>Source\TD_Game</Filter>
     </ClInclude>
     <None Include="..\..\TD_Game.uproject" />

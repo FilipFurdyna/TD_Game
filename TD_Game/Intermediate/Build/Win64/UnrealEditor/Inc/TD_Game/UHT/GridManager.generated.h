@@ -17,7 +17,7 @@
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
 
 // ********** Begin Class AGridManager *************************************************************
-#define FID_Users_Filip_LC_Documents_GitHub_TD_Game_TD_Game_Source_TD_Game_GridManager_h_40_RPC_WRAPPERS_NO_PURE_DECLS \
+#define FID_Users_Filip_LC_Documents_GitHub_TD_Game_TD_Game_Source_TD_Game_GridManager_h_41_RPC_WRAPPERS_NO_PURE_DECLS \
 	DECLARE_FUNCTION(execPlaceIsland); \
 	DECLARE_FUNCTION(execHighlightTile);
 
@@ -25,7 +25,7 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 struct Z_Construct_UClass_AGridManager_Statics;
 TD_GAME_API UClass* Z_Construct_UClass_AGridManager_NoRegister();
 
-#define FID_Users_Filip_LC_Documents_GitHub_TD_Game_TD_Game_Source_TD_Game_GridManager_h_40_INCLASS_NO_PURE_DECLS \
+#define FID_Users_Filip_LC_Documents_GitHub_TD_Game_TD_Game_Source_TD_Game_GridManager_h_41_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesAGridManager(); \
 	friend struct ::Z_Construct_UClass_AGridManager_Statics; \
@@ -36,7 +36,7 @@ public: \
 	DECLARE_SERIALIZER(AGridManager)
 
 
-#define FID_Users_Filip_LC_Documents_GitHub_TD_Game_TD_Game_Source_TD_Game_GridManager_h_40_ENHANCED_CONSTRUCTORS \
+#define FID_Users_Filip_LC_Documents_GitHub_TD_Game_TD_Game_Source_TD_Game_GridManager_h_41_ENHANCED_CONSTRUCTORS \
 	/** Deleted move- and copy-constructors, should never be used */ \
 	AGridManager(AGridManager&&) = delete; \
 	AGridManager(const AGridManager&) = delete; \
@@ -46,13 +46,13 @@ public: \
 	NO_API virtual ~AGridManager();
 
 
-#define FID_Users_Filip_LC_Documents_GitHub_TD_Game_TD_Game_Source_TD_Game_GridManager_h_37_PROLOG
-#define FID_Users_Filip_LC_Documents_GitHub_TD_Game_TD_Game_Source_TD_Game_GridManager_h_40_GENERATED_BODY \
+#define FID_Users_Filip_LC_Documents_GitHub_TD_Game_TD_Game_Source_TD_Game_GridManager_h_38_PROLOG
+#define FID_Users_Filip_LC_Documents_GitHub_TD_Game_TD_Game_Source_TD_Game_GridManager_h_41_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	FID_Users_Filip_LC_Documents_GitHub_TD_Game_TD_Game_Source_TD_Game_GridManager_h_40_RPC_WRAPPERS_NO_PURE_DECLS \
-	FID_Users_Filip_LC_Documents_GitHub_TD_Game_TD_Game_Source_TD_Game_GridManager_h_40_INCLASS_NO_PURE_DECLS \
-	FID_Users_Filip_LC_Documents_GitHub_TD_Game_TD_Game_Source_TD_Game_GridManager_h_40_ENHANCED_CONSTRUCTORS \
+	FID_Users_Filip_LC_Documents_GitHub_TD_Game_TD_Game_Source_TD_Game_GridManager_h_41_RPC_WRAPPERS_NO_PURE_DECLS \
+	FID_Users_Filip_LC_Documents_GitHub_TD_Game_TD_Game_Source_TD_Game_GridManager_h_41_INCLASS_NO_PURE_DECLS \
+	FID_Users_Filip_LC_Documents_GitHub_TD_Game_TD_Game_Source_TD_Game_GridManager_h_41_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 

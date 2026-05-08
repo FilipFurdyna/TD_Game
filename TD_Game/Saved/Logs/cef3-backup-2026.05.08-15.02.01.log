@@ -1,0 +1,30 @@
+[34648:34612:0508/170041.861:WARNING:chrome_main_delegate.cc(745)] This is Chrome version 128.0.6613.138 (not a warning)
+[34648:20252:0508/170041.927:ERROR:google_update_settings.cc(265)] Failed opening key Software\Chromium to set usagestats; result: 5
+[34648:34612:0508/170041.955:WARNING:account_consistency_mode_manager.cc(77)] Desktop Identity Consistency cannot be enabled as no OAuth client ID and client secret have been configured.
+[34648:30104:0508/170045.852:WARNING:leveldb_database.cc(141)] Unable to open C:\Users\Filip_LC\Documents\GitHub\TD_Game\TD_Game\Saved\webcache_6613\Default\shared_proto_db\metadata: IO error: C:\Users\Filip_LC\Documents\GitHub\TD_Game\TD_Game\Saved\webcache_6613\Default\shared_proto_db\metadata/MANIFEST-000001: Unable to create sequential file (ChromeMethodBFE: 7::NewSequentialFile::1)
+[34648:30104:0508/170045.856:WARNING:leveldb_database.cc(141)] Unable to open C:\Users\Filip_LC\Documents\GitHub\TD_Game\TD_Game\Saved\webcache_6613\Default\shared_proto_db\metadata: IO error: C:\Users\Filip_LC\Documents\GitHub\TD_Game\TD_Game\Saved\webcache_6613\Default\shared_proto_db\metadata/MANIFEST-000001: Unable to create sequential file (ChromeMethodBFE: 7::NewSequentialFile::1)
+[34648:30104:0508/170045.858:WARNING:leveldb_database.cc(141)] Unable to open C:\Users\Filip_LC\Documents\GitHub\TD_Game\TD_Game\Saved\webcache_6613\Default\shared_proto_db\metadata: IO error: C:\Users\Filip_LC\Documents\GitHub\TD_Game\TD_Game\Saved\webcache_6613\Default\shared_proto_db\metadata/MANIFEST-000001: Unable to create sequential file (ChromeMethodBFE: 7::NewSequentialFile::1)
+[34648:30104:0508/170045.861:WARNING:leveldb_database.cc(141)] Unable to open C:\Users\Filip_LC\Documents\GitHub\TD_Game\TD_Game\Saved\webcache_6613\Default\shared_proto_db\metadata: IO error: C:\Users\Filip_LC\Documents\GitHub\TD_Game\TD_Game\Saved\webcache_6613\Default\shared_proto_db\metadata/MANIFEST-000001: Unable to create sequential file (ChromeMethodBFE: 7::NewSequentialFile::1)
+[34648:24356:0508/170046.304:WARNING:value_store_frontend.cc(47)] Reading ahfgeienlihckogmohjhadlkjgocpleb.alarms from  failed: IO error: .../MANIFEST-000001: Unable to create sequential file (ChromeMethodBFE: 7::NewSequentialFile::1)
+[34648:24356:0508/170046.305:WARNING:value_store_frontend.cc(47)] Reading mhjfbmdgcfjbbpaeojofohoefgiehjai.alarms from  failed: IO error: .../MANIFEST-000001: Unable to create sequential file (ChromeMethodBFE: 7::NewSequentialFile::1)
+[33836:13604:0508/170046.719:WARNING:frame_impl.cc(430)] virtual CefFrameImpl::SendProcessMessage sent to detached frame 5-A8A423B84F557D53CBDB9E8E1A447AA9 will be ignored
+[34648:1516:0508/170047.114:WARNING:browser_info.cc(345)] Returning a speculative frame for [7,9]
+[34648:34612:0508/170047.163:WARNING:browser_info.cc(345)] Returning a speculative frame for [8,9]
+[34648:34612:0508/170047.163:WARNING:browser_info.cc(345)] Returning a speculative frame for [8,9]
+[34648:34612:0508/170047.163:WARNING:browser_info.cc(345)] Returning a speculative frame for [8,9]
+[34648:34612:0508/170047.163:WARNING:browser_info.cc(345)] Returning a speculative frame for [8,9]
+[34648:1516:0508/170047.167:WARNING:browser_info.cc(345)] Returning a speculative frame for [8,9]
+[31020:30180:0508/170048.177:WARNING:codec.cc(525)] Explicitly added H264 constrained baseline to list of supported formats.
+[31020:30180:0508/170048.387:WARNING:codec.cc(525)] Explicitly added H264 constrained baseline to list of supported formats.
+[31020:29432:0508/170048.394:WARNING:codec.cc(525)] Explicitly added H264 constrained baseline to list of supported formats.
+[31020:29432:0508/170048.394:WARNING:codec.cc(525)] Explicitly added H264 constrained baseline to list of supported formats.
+[31020:29432:0508/170048.394:WARNING:codec.cc(525)] Explicitly added H264 constrained baseline to list of supported formats.
+[15544:32424:0508/170048.412:WARNING:host_resolver_dns_task.cc(863)] Address list empty after RFC3484 sort
+[15544:32424:0508/170048.418:ERROR:socket_manager.cc(147)] Failed to resolve address for stun.cloudflare.com., errorcode: -105
+[15544:32424:0508/170048.418:ERROR:socket_manager.cc(147)] Failed to resolve address for stun.cloudflare.com., errorcode: -105
+[15544:32424:0508/170048.418:ERROR:socket_manager.cc(147)] Failed to resolve address for stun.cloudflare.com., errorcode: -105
+[31020:29432:0508/170048.418:WARNING:stun_port.cc(442)] Port[3f0e400:0:1:0:host:Net[any:0:0:0:x:x:x:x:x/0:Wildcard:id=0]]: StunPort: stun host lookup received error -1
+[31020:29432:0508/170048.418:WARNING:stun_port.cc(442)] Port[3f0ec00:1:1:0:host:Net[any:0:0:0:x:x:x:x:x/0:Wildcard:id=0]]: StunPort: stun host lookup received error -1
+[31020:29432:0508/170048.418:WARNING:stun_port.cc(442)] Port[3f0f400:2:1:0:host:Net[any:0:0:0:x:x:x:x:x/0:Wildcard:id=0]]: StunPort: stun host lookup received error -1
+[34648:1516:0508/170050.479:ERROR:cast_crl.cc(443)] CRL - Verification failed.
+[34648:34612:0508/170201.479:WARNING:pref_notifier_impl.cc(41)] Pref observer for media_router.cast_allow_all_ips found at shutdown.
