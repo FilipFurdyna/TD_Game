@@ -102,8 +102,3 @@ Planned features:
 
 ---
 
-## ▶️ Getting Started
-
-```bash
-git clone https://github.com/FilipFurdyna/TD_Game.git
-cd TD_Game
